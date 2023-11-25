@@ -11,13 +11,13 @@ data "terraform_remote_state" "vpc" {
 }
 
 # Pulls information from rds workspace
-data "terraform_remote_state" "vpc" {
+data "terraform_remote_state" "rds" {
   backend = "remote"
 
   config = {
     organization = "tatianazubco11"
     workspaces = {
-      name = "vpc"
+      name = "rds"
     }
   }
 }
